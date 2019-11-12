@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扬声器"
+        android:id="@+id/speakerSwitch3"
+        android:checked="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/titleTag3" />
+
+    <Switch
+        android:id="@+id/micSwitch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/speakerSwitch3"
+        android:layout_alignRight="@+id/speakerSwitch3"
+        android:layout_alignStart="@+id/speakerSwitch3"
+        android:layout_below="@+id/speakerSwitch3"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:text="麦克风" />
+
+    <SeekBar
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/micSeekBar3"
+        android:layout_toRightOf="@+id/speakerSwitch3"
+        android:layout_alignTop="@+id/speakerSwitch3"
+        android:layout_alignBottom="@+id/speakerSwitch3"
+        android:max="100"
+        android:indeterminate="false"
+        android:progress="100"
+        android:layout_marginLeft="20dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100"
+        android:id="@+id/volumeTag3"
+        android:layout_alignBottom="@+id/micSeekBar3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="离开房间"
+        android:id="@+id/leaveRoomBT3"
+        android:onClick="onLeaveRoom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTag3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="title1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic"
+        android:textSize="20px"
+        android:editable="false" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tipsTag3"
+        android:layout_above="@+id/leaveRoomBT3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:editable="false"
+        android:textColor="@color/colorAccent"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="控制用户的Userid:"
+        android:id="@+id/cUserID3"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扬声器"
+        android:id="@+id/cSpeakerSwitch3"
+        android:checked="true"
+        android:layout_below="@+id/cUserID3"
+        android:layout_alignLeft="@+id/speakerSwitch3"
+        android:layout_alignRight="@+id/speakerSwitch3"
+        android:layout_alignStart="@+id/speakerSwitch3"
+        android:layout_marginTop="16dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="麦克风"
+        android:id="@+id/cMicSwitch3"
+        android:checked="true"
+        android:layout_below="@+id/cSpeakerSwitch3"
+        android:layout_alignLeft="@+id/speakerSwitch3"
+        android:layout_alignRight="@+id/speakerSwitch3"
+        android:layout_alignStart="@+id/speakerSwitch3"
+        android:layout_marginTop="16dp" />
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="屏    蔽"
+        android:id="@+id/cAvoidSwitch3"
+        android:checked="false"
+        android:layout_below="@+id/cMicSwitch3"
+        android:layout_alignLeft="@+id/speakerSwitch3"
+        android:layout_alignRight="@+id/speakerSwitch3"
+        android:layout_alignStart="@+id/speakerSwitch3"
+        android:layout_marginTop="16dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停通话"
+        android:id="@+id/pauseSwitch3"
+        android:layout_below="@+id/micSwitch3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:textOff = "否"
+        android:textOn="是"/>
+
+
+
+
+</RelativeLayout>

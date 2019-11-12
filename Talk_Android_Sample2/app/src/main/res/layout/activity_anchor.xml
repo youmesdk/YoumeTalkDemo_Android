@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.youme.android.rtcdemo.AnchorActivity">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="监    听"
+        android:id="@+id/monitorSwitch1"
+        android:checked="false"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/titleTag1" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="麦克风"
+        android:id="@+id/micSwitch1"
+        android:checked="true"
+        android:layout_below="@+id/monitorSwitch1"
+        android:layout_alignLeft="@+id/monitorSwitch1"
+        android:layout_alignRight="@+id/monitorSwitch1"
+        android:layout_alignStart="@+id/monitorSwitch1"
+        android:layout_marginTop="16dp" />
+
+    <SeekBar
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/micSeekBar1"
+        android:layout_toRightOf="@+id/speakerSwitch1"
+        android:layout_alignTop="@+id/speakerSwitch1"
+        android:layout_alignBottom="@+id/speakerSwitch1"
+        android:max="100"
+        android:indeterminate="false"
+        android:progress="100"
+        android:layout_marginLeft="20dp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="背景乐"
+        android:id="@+id/bgmSwitch1"
+        android:layout_below="@+id/micSwitch1"
+        android:layout_alignLeft="@+id/micSwitch1"
+        android:layout_alignStart="@+id/micSwitch1"
+        android:layout_marginTop="16dp"
+        android:checked="false" />
+
+    <SeekBar
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bgmSeekBar1"
+        android:layout_toRightOf ="@+id/bgmSwitch1"
+        android:layout_alignTop="@+id/bgmSwitch1"
+        android:layout_alignBottom="@+id/bgmSwitch1"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100"
+        android:id="@+id/volumeTag1"
+        android:layout_alignBottom="@+id/micSeekBar1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100"
+        android:id="@+id/bgmVolumeTag1"
+        android:layout_alignRight="@id/volumeTag1"
+        android:layout_alignBottom="@+id/bgmSeekBar1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="离开房间"
+        android:id="@+id/leaveRoomBT1"
+        android:onClick="onLeaveRoom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTag1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="title1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic"
+        android:textSize="20px"
+        android:editable="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扬声器"
+        android:id="@+id/speakerSwitch1"
+        android:layout_below="@+id/bgmSwitch1"
+        android:layout_alignLeft="@+id/bgmSwitch1"
+        android:layout_alignRight="@+id/bgmSwitch1"
+        android:layout_alignStart="@+id/bgmSwitch1"
+        android:layout_marginTop="16dp"
+        android:checked="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/tipsTag1"
+        android:layout_above="@+id/leaveRoomBT1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:editable="false"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="设置延迟"
+        android:id="@+id/textView1"
+        android:layout_marginTop="32dp"
+        android:editable="false"
+        android:layout_below="@+id/speakerSwitch1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/delaySeekBar1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_toEndOf="@+id/textView1"
+        android:max="25"
+        android:indeterminate="false"
+        android:progress="22"
+        android:layout_alignTop="@+id/textView1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="440ms"
+        android:id="@+id/delayTag1"
+        android:layout_alignBottom="@+id/delaySeekBar1"
+        android:layout_alignParentRight="true"
+       />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停通话"
+        android:id="@+id/pauseSwitch1"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:textOff = "否"
+        android:textOn="是"/>
+
+
+</RelativeLayout>

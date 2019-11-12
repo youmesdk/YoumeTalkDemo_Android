@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.youme.android.rtcdemo.MainActivity">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="  Now:正服  "
+        android:id="@+id/serverTag"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="初始化"
+        android:id="@+id/Init"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/serverTag"
+        android:layout_alignRight="@+id/serverTag"
+        android:layout_alignLeft="@+id/serverTag"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onInitClick" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=" 反初始化 "
+        android:id="@+id/unInit"
+        android:layout_alignBottom="@+id/Init"
+        android:layout_alignTop="@+id/Init"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onUnInitClick" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="    用户ID:"
+        android:id="@+id/userIDTag"
+        android:layout_below="@+id/Init"
+        android:layout_alignRight="@+id/Init"
+        android:layout_alignLeft="@+id/Init"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userID"
+        android:text="youme_1"
+        android:layout_alignBottom="@+id/userIDTag"
+        android:layout_toRightOf="@+id/userIDTag"
+        android:layout_toEndOf="@+id/userIDTag" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="    房间ID:"
+        android:id="@+id/roomIDTag"
+        android:layout_below="@+id/userIDTag"
+        android:layout_alignRight="@+id/Init"
+        android:layout_alignLeft="@+id/Init"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/roomID"
+        android:text="2418"
+        android:layout_alignBottom="@+id/roomIDTag"
+        android:layout_toRightOf="@+id/roomIDTag"
+        android:layout_toEndOf="@+id/roomIDTag" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主播模式"
+        android:id="@+id/anchor"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/roomIDTag"
+        android:layout_alignRight="@+id/Init"
+        android:layout_alignLeft="@+id/Init"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onAnchorClick" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="听众模式"
+        android:id="@+id/listenAnchor"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/anchor"
+        android:layout_alignRight="@+id/Init"
+        android:layout_alignLeft="@+id/Init"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onListenAnchorClick" />
+
+    <Button
+        android:id="@+id/setWhiteUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/unInit"
+        android:layout_below="@+id/unInit"
+        android:layout_marginTop="25dp"
+        android:onClick="onsetWhiteUserClick"
+        android:text="狼人杀模式" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/normalRoom"
+        android:layout_alignRight="@+id/unInit"
+        android:layout_alignLeft="@+id/unInit"
+        android:layout_alignTop="@+id/setWhiteUser"
+        android:layout_marginTop="60dp"
+        android:text="自由通话模式"
+        android:onClick="onNormalClick" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/controlOtherMicSpeak"
+        android:layout_alignRight="@+id/unInit"
+        android:layout_alignLeft="@+id/unInit"
+        android:layout_alignTop="@+id/normalRoom"
+        android:layout_marginTop="60dp"
+        android:text="控制他人模式"
+        android:onClick="onControlOtherMicSpeak" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hello!"
+        android:id="@+id/tipTag"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="41dp"
+        android:layout_alignLeft="@+id/Init"
+        android:layout_alignRight="@+id/normalRoom"
+        android:layout_alignEnd="@+id/normalRoom"
+        android:textColor="@color/colorAccent" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移动网"
+        android:id="@+id/mobileSwitch"
+        android:layout_alignRight="@+id/unInit"
+        android:layout_alignEnd="@+id/unInit"
+        android:checked="true" />
+
+</RelativeLayout>
